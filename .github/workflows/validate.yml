@@ -10,11 +10,7 @@ on:
 
 jobs:
   setup:
-    strategy:
-      matrix:
-        os: [ubuntu-latest, macos-latest]
-        node: [14, 16]
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
@@ -22,7 +18,7 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node }}
+          node-version: 14
 
       - name: Run setup script
         run: npm run setup
