@@ -1,4 +1,5 @@
-name: validate
+name: validate and test
+
 on:
   push:
     branches:
@@ -6,23 +7,25 @@ on:
   pull_request:
     branches:
       - 'main'
+
 jobs:
   setup:
-    # ignore all-contributors PRs
-    if: ${{ !contains(github.head_ref, 'all-contributors') }}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
-        node: [10.13, 12, 14, 15]
+        os: [ubuntu-latest, macos-latest]
+        node: [14, 16]
     runs-on: ${{ matrix.os }}
     steps:
-      - name: ⬇️ Checkout repo
+      - name: Checkout repo
         uses: actions/checkout@v2
 
-      - name: ⎔ Setup node
+      - name: Setup node
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node }}
 
-      - name: ▶️ Run setup script
+      - name: Run setup script
         run: npm run setup
+        
+      - name: Run tests
+        run: npm run test:coverage
