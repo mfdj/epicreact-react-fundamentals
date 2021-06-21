@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<body>
+
+<!-- Runs first -->
+<script id="one">
+  console.log('script-one');
+  letterA = 'eh'          // window.letterA
+  letterB = 'bee'
+  undefined = 'farts'
+  console.log(`script-one: value of undefined is ${undefined}`);
+</script>
+
+<!-- Third -->
+<script type="module" id="two">
+  console.log('script-two ✨module✨');
+  letterA = '🇨🇦'          // window.letterB
+  window.letterB = '🐝'  // in a module you can't initialize a new global
+  let letterC = 'see'
+</script>
+
+<!-- Fourth -->
+<script type="module" id="three">
+  console.log('script-three ✨module✨');
+  let letterC = '👀'
+</script>
+
+<!-- Second -->
+<script id="four">
+  console.log('script-four');
+  console.log(`letterA is ${JSON.stringify(letterA)}`);
+  console.log(`letterB is ${JSON.stringify(letterB)}`);
+  if (typeof letterC !== 'undefined') {
+    throw Error('this should not hapepn - letterC was defined in a module not global scope');
+  }
+  console.log(`script-four: value of undefined is ${undefined}`);
+</script>
+
+<!-- Fifth -->
+<script type="module" id="five">
+  console.log('script-five ✨module✨');
+  console.log(`letterA is ${JSON.stringify(letterA)}`);
+  console.log(`letterB is ${JSON.stringify(letterB)}`);
+  if (typeof letterC !== 'undefined') {
+    throw Error('this should not hapepn - letterC was defined in a module not global scope');
+  }
+  console.log(`script-five: value of undefined is ${undefined}`);
+</script>
