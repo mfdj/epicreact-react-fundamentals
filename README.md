@@ -20,3 +20,9 @@ Repository cloned/forked from [github.com/kentcdodds/react-fundamentals](https:/
 1. Basic JS "Hello World" [#2](https://github.com/mfdj/epicreact-react-fundamentals/pulls/2)
   * my solution was pure js, whereas the final version used the root element directly in the html
   * learned that there is a [**module**](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-type) type for script tags `<script type="module">…</script>` which does neat stuff like scope isolation for inline scripts (see: `extracurricular/script-type-node.html`)
+1. Intro to Raw Reacts APIs
+  * converting our "Hello World" to React; uses [`React.createElement`](https://reactjs.org/docs/react-api.html#createelement) and [`ReactDOM.render`](https://reactjs.org/docs/react-dom.html#render)
+  * "Because React exposes a UMD, which is short for Universal Module Definition, it allows us to create a global variable in the browser that we can reference inside of our code" 💡 this is a good reminder that UMD is useful for non-code-bundler situations
+  * great article [Imperative vs Declarative Programming](https://ui.dev/imperative-vs-declarative-programming/)
+  * `React.createElement` just returns objects
+  * DOM manipulation is namespaced `ReactDOM` because compilation target is abstracted away (i.e. also React Native and React VR)
