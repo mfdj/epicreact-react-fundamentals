@@ -10,9 +10,10 @@
   <script type="text/babel">
     const className = 'container'
     const children = 'Hello World'
+    const props = { className, children };
 
     ReactDOM.render(
-      <h1 className={className}>{children}</h1>,
+      <h1 {...props} />,
       document.getElementById('root'),
     )
   </script>
