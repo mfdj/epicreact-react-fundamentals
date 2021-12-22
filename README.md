@@ -26,3 +26,6 @@ Repository cloned/forked from [github.com/kentcdodds/react-fundamentals](https:/
   * great article [Imperative vs Declarative Programming](https://ui.dev/imperative-vs-declarative-programming/)
   * `React.createElement` just returns objects
   * DOM manipulation is namespaced `ReactDOM` because compilation target is abstracted away (i.e. also React Native and React VR)
+1. Using JSX
+  * Definitely want to make not of the [Babel REPL](https://babeljs.io/repl#?browsers=defaults%2C%20not%20ie%2011%2C%20not%20ie_mob%2011&build=&builtIns=App&corejs=3.6&spec=false&loose=false&code_lz=MYewdgzgLgBArgSxgXhgHgCYIG4D40QAOAhmLgBICmANtSGgPRGm7rNkDqIATtRo-3wMseAFBA&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=false&fileSize=false&timeTravel=false&sourceType=module&lineWrap=true&presets=react&prettier=true&targets=&version=7.16.6&externalPlugins=&assumptions=%7B%7D)
+  * GTK that `@babel/standalone@7.12.4/babel.js` + `<script type="text/babel">` are available!
