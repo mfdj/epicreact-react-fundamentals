@@ -9,12 +9,12 @@
   <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
 
   <script type="text/babel">
-    const message = children => <div className="message">{children}</div>
+    const Message = ({ children }) => <div className="message">{children}</div>
     
     const element = (
       <div className="container">
-        {message('Hello World')}
-        {message('Goodbye World')}
+        <Message>Hello World</Message>
+        <Message>Goodbye World</Message>
       </div>
     )
 
