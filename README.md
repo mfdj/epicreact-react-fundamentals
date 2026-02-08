@@ -31,3 +31,5 @@ Repository cloned/forked from [github.com/kentcdodds/react-fundamentals](https:/
     * GTK that `@babel/standalone@7.12.4/babel.js` + `<script type="text/babel">` are available!
     * the [extra credit video](https://epicreact.dev/modules/react-fundamentals/using-jsx-extra-credit-solution-01) has a great breakdown of why `<Thing propA={…}>{…}</Thing>` allows expressions inside the js-interpolated `{…}` and not statements (because it compiles down to `React.createElement(Thing, { propA: … }, …)`)
     * also good https://reactjs.org/docs/jsx-in-depth.html
+0. Using JSX [#8](https://github.com/mfdj/epicreact-react-fundamentals/pull/8)
+    * Doing the extra credit is framed in a tedious manner but glancing through the progression was good
